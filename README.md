@@ -1,0 +1,88 @@
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Blog Sederhana - Profil & Jawaban</title>
+  <style>
+    :root{ --bg:#f0f6ff; --card:#ffffff; --accent:#2563eb; --muted:#475569; --radius:14px }
+    *{box-sizing:border-box}
+    body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; background:var(--bg); color:#111; margin:0; padding:24px; background-image:linear-gradient(120deg, #dbeafe, #eff6ff)}
+    .container{max-width:900px;margin:0 auto}
+    header{display:flex;gap:20px;align-items:center;margin-bottom:18px}
+    .profile-card{background:linear-gradient(180deg, #fff, #eff6ff);border-radius:var(--radius);box-shadow:0 6px 18px rgba(20,20,50,0.08);padding:16px;display:flex;gap:16px;align-items:center;position:relative;overflow:hidden}
+    .profile-card::before{content:'';position:absolute;top:-40px;right:-40px;width:120px;height:120px;background:rgba(37,99,235,0.15);border-radius:50%;z-index:0}
+    .profile-card::after{content:'';position:absolute;bottom:-50px;left:-30px;width:160px;height:160px;background:rgba(59,130,246,0.12);border-radius:50%;z-index:0}
+    .avatar{width:84px;height:84px;border-radius:50%;overflow:hidden;flex:0 0 84px;background:#e0f2fe;display:flex;align-items:center;justify-content:center;z-index:1;border:3px solid var(--accent)}
+    .avatar img{width:100%;height:100%;object-fit:cover;display:block;border-radius:50%}
+    .meta{z-index:1}
+    .meta h1{font-size:18px;margin:0 0 4px;color:var(--accent)}
+    .meta p{margin:0;color:var(--muted);font-size:14px}
+    .info{display:flex;gap:12px;margin-top:8px;flex-wrap:wrap}
+    .chip{background:#dbeafe;border:1px solid rgba(37,99,235,0.2);padding:6px 10px;border-radius:999px;font-size:13px;color:var(--accent)}
+    .chip a{text-decoration:none;color:var(--accent)}
+    .hero {text-align: center;margin-top: 20px;}
+    .hero iframe {width: 60%;max-width: 500px;height: 405px;display:flex;gap:16px;align-items:center;position:relative;overflow:hidden}
+    
+    main{margin-top:20px}
+    .post{max-width: 500px; background:var(--card);border-radius:14px;padding:16px;margin-bottom:14px;box-shadow:0 6px 18px rgba(10,10,30,0.05);border-top:4px solid var(--accent)}
+    .post h2{font-size:16px;margin:0 0 8px;color:var(--accent)}
+    .post p{margin:0 0 8px;color:#202124;line-height:1.6}
+    .post .caption{color:var(--muted);font-size:13px;font-style:italic}
+
+    footer{margin-top:18px;color:var(--muted);font-size:13px;text-align:left;margin-right: 50; padding:10px 0;border-top:1px solid #cbd5e1}
+
+    /* responsive */
+    @media (max-width:520px){header{flex-direction:column;align-items:flex-start}.avatar{width:72px;height:72px}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="profile-card">
+        <div class="avatar">
+          <img src="foto1.jpg" alt="Foto Profil">
+        </div>
+        <div class="meta">
+          <h1>NAUFAL HILMI HAFIZH</h1>
+          <p>NIM: 24416255201006 • Kelas: IF24F - Teknik Informatika</p>
+          <div class="info">
+            <span class="chip">Universitas Buana Perjuangan Karawang</span>
+            <span class="chip" style="background:#eff6ff;color:#1e3a8a">Blog Basis Data</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="hero">
+        <iframe src="https://www.youtube.com/embed/9JAmEnoLgTc?si=7rrRnna2HzUZ_9wk" 
+      title="YouTube video" allowfullscreen></iframe>
+    </div>
+
+    <main>
+      <article class="post" id="post-1">
+        <h2>Post 2: Apa itu Attribute, Entitas, dan Relasi dalam ERD?</h2>
+        <p>Dalam <em>Entity Relationship Diagram (ERD)</em>, ada tiga komponen utama yang digunakan untuk memodelkan data:</p>
+      <ul>
+        <li><strong>Atribut (Attribute)</strong> → Atribut adalah ciri atau informasi yang dimiliki entitas.  
+          <br>Contoh:</li>
+          <p>Produk → <strong>ID Produk, Nama Produk, Harga, Stok</strong></p> 
+          <p>Pelanggan → <strong>Pelanggan, Nama, Email, Alamat</strong></p>
+          <p>Pesanan → <strong>Pesanan, Tanggal Pesan, Total Harga</strong></p>
+        <li><strong>Entitas (Entity)</strong> → Entitas adalah objek nyata atau konsep yang datanya ingin disimpan.  
+          <br>Contoh di toko online : <em>Produk, Pelanggan, Pesanan.</em>.</li>
+          <p>Produk = barang yang dijual.</p> 
+          <p>Pelanggan = orang yang membeli.</p> 
+          <p>Pesanan = transaksi pembelian.</p>
+        <li><strong>Relasi (Relationship)</strong> → Relasi adalah hubungan antar entitas.  
+          <br>Contoh:</li>
+          <p>1. Pelanggan membuat Pesanan</p> 
+          <p>2. Pesanan berisi Produk</p> 
+      </article>
+    </main>
+
+    <footer>
+      &copy; 2025 - Naufal Hilmi Hafizh - Basis Data - Teknik Informatika <a href="https://www.ubpkarawang.ac.id" target="_blank">UBP Karawang</a>
+    </footer>
+  </div>
+</body>
+</html>
